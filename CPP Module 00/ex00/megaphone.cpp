@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 19:51:05 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/02 20:36:27 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/04 23:02:18 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ int     main(int ac, char **av)
     i = 1;
     while (i < ac) {
         capitalize(av[i]);
-        std::cout << av[i] << std::ends;
+        std::cout << av[i];
+        if (i < ac - 1) {
+            std::cout << " ";
+        }
         i++;
     }
-    std::cout << "\n" << std::ends; 
+    std::cout << std::endl; 
     return (0);
 }
