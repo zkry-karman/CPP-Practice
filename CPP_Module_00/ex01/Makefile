@@ -22,9 +22,9 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(OBJS)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONE: all cleann fclean re
+.PHONY: all cleann fclean re
