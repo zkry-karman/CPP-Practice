@@ -6,26 +6,26 @@
 /*   By: zkarman <zkarman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 20:07:11 by zkarman           #+#    #+#             */
-/*   Updated: 2026/06/11 21:54:38 by zkarman          ###   ########.fr       */
+/*   Updated: 2026/06/11 22:56:17 by zkarman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 void    Harl::debug(void) {
-    std::cout << "Debug:\nI love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
+    std::cout << "[ Debug ]\nI love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
 }
 
 void    Harl::info(void) {
-    std::cout << "Info:\nI cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
+    std::cout << "[ Info ]\nI cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
 }
 
 void    Harl::warning(void) {
-    std::cout << "Warning:\nI think i deserve to have some extra bacon for free. I've been coming for years, whereas you started working here just last month." << std::endl;
+    std::cout << "[ Warning ]\nI think i deserve to have some extra bacon for free. I've been coming for years, whereas you started working here just last month." << std::endl;
 }
 
 void    Harl::error(void) {
-    std::cout << "Error:\nThis is unacceptable! I want to speak to the manage now." << std::endl;
+    std::cout << "[ Error ]\nThis is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
 void    Harl::complain(std::string level) {
@@ -50,4 +50,5 @@ void    Harl::complain(std::string level) {
         }
         i++;
     }
+    std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }
