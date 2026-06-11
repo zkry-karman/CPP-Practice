@@ -6,7 +6,7 @@
 /*   By: zkarman <zkarman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 20:07:31 by zkarman           #+#    #+#             */
-/*   Updated: 2026/06/11 21:04:11 by zkarman          ###   ########.fr       */
+/*   Updated: 2026/06/11 21:57:01 by zkarman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int     main(int ac, char **av) {
     if (ac != 2) {
-        std::cout << "Please compile with a level" << std::endl;
+        std::cerr << "Please run with a level" << std::endl;
         return (1);
     }
     std::string     level = av[1];
