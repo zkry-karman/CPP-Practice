@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 12:36:36 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/15 12:38:44 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/16 14:59:05 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int     main(void) {
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
 
-    return c;
+    return 0;
 }
