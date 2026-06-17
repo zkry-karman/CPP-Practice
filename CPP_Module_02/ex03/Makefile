@@ -5,10 +5,13 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 	   Fixed.cpp \
+	   bsp.cpp \
+	   Point.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS = Fixed.hpp
+HEADERS = Fixed.hpp \
+		  Point.cpp \
 
 all: $(NAME)
 
