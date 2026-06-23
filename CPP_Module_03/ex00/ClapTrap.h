@@ -6,19 +6,20 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 12:55:11 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/18 13:10:31 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/23 15:04:59 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_H
 # define CLAPTRAP_H
+#include <iostream>
 
 class ClapTrap {
     private:
         std::string     name;
-        int             HitPoints = 10;
-        int             EnergyPoints = 10;
-        int             AttackDamage = 0;
+        int             HitPoints;
+        int             EnergyPoints;
+        int             AttackDamage;
     
     public:
         ClapTrap();
@@ -26,9 +27,13 @@ class ClapTrap {
         void            takeDamage(unsigned int amount);
         void            beRepaired(unsigned int amount);
 
-        void            setName(const std::string& str);
+        void            setName(const std::string& name);
+        void            seeStats(void);
+
+        std::string     getName(void);
+        int             getAttackDamage(void);
 
         ~ClapTrap();
-}
+};
 
 #endif
