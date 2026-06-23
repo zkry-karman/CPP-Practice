@@ -1,4 +1,4 @@
-NAME = FragTrap
+NAME = DiamondTrap
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow
@@ -6,13 +6,15 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow
 SRCS = main.cpp \
 	   ClapTrap.cpp \
 	   ScavTrap.cpp \
-	   FragTrap.cpp
+	   FragTrap.cpp \
+	   DiamondTrap.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
 HEADERS = ClapTrap.h \
 		  ScavTrap.h \
-		  FragTrap.h
+		  FragTrap.h \
+		  DiamondTrap.h \
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 13:04:43 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/23 21:29:20 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/23 21:19:06 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 ClapTrap::ClapTrap(void) : name(""), HitPoints(10), EnergyPoints(10), AttackDamage(0) {
     std::cout << "ClapTrap Constructor has been called." << std::endl;
 }
+
+ClapTrap::ClapTrap (const std::string& _name) : name(_name), HitPoints(10), EnergyPoints(10), AttackDamage(0) {
+    std::cout << "ClapTrap Constructor has been called for " << this->name << std::endl;
+} 
 
 void    ClapTrap::setName(const std::string& _name) {
     this->name = _name;
@@ -75,5 +79,5 @@ void    ClapTrap::seeStats(void) {
 
 
 ClapTrap::~ClapTrap() {
-    std::cout << "ClapTrap Destructor has been called." << std::endl;
+    std::cout << "ClapTrap Destructor has been called for " << this->name << std::endl;
 }

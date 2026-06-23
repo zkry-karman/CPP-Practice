@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 16:05:12 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/23 21:27:00 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/23 21:19:33 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.h"
 
-class ScavTrap: public ClapTrap {
+class ScavTrap: virtual public ClapTrap {
     public:
         ScavTrap();
         ScavTrap(const std::string& _name);

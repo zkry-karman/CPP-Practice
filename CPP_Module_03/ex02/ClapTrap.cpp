@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 13:04:43 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/23 18:09:29 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/23 21:26:36 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ ClapTrap::ClapTrap(void) : name(""), HitPoints(10), EnergyPoints(10), AttackDama
     std::cout << "ClapTrap Constructor has been called." << std::endl;
 }
 
-void    ClapTrap::setName(const std::string& name) {
-    this->name = name;
+void    ClapTrap::setName(const std::string& _name) {
+    this->name = _name;
 }
 
 ClapTrap::ClapTrap (const ClapTrap& copy) {

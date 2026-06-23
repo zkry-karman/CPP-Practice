@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.h                                         :+:      :+:    :+:   */
+/*   DiamondTrap.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/23 16:05:12 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/23 21:27:00 by karmanz          ###   ########.fr       */
+/*   Created: 2026/06/23 18:18:40 by karmanz           #+#    #+#             */
+/*   Updated: 2026/06/23 21:20:52 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#ifndef DIAMONDTRAP_H
+# define DIAMONDTRAP_H
 
-#include "ClapTrap.h"
+#include "ScavTrap.h"
+#include "FragTrap.h"
 
-class ScavTrap: public ClapTrap {
+class DiamondTrap: public ScavTrap, public FragTrap {
+    private:
+        std::string         name;
     public:
-        ScavTrap();
-        ScavTrap(const std::string& _name);
-        ScavTrap(const ScavTrap& copy);
-        ScavTrap& operator = (const ScavTrap& other);
+        DiamondTrap();
+        DiamondTrap(const std::string& _name);
+        DiamondTrap(const DiamondTrap& copy);
+        DiamondTrap& operator = (const DiamondTrap& other);
+        using ScavTrap::attack;
 
-        void        attack(const std::string& target);
-        void        guardGate();
+        void        whoAmI(void);
 
         void        seeStats(void);
         
-        ~ScavTrap();
+        ~DiamondTrap();
 };
 
 #endif

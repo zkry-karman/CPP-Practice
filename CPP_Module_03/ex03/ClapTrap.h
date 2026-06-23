@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 12:55:11 by karmanz           #+#    #+#             */
-/*   Updated: 2026/06/23 21:26:27 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/06/23 21:19:17 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ClapTrap {
     
     public:
         ClapTrap();
+        ClapTrap(const std::string& _name);
         ClapTrap(const ClapTrap& copy);
         ClapTrap& operator = (const ClapTrap& other);
         void            attack(const std::string& target);
