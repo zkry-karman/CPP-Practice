@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 11:51:49 by karmanz           #+#    #+#             */
-/*   Updated: 2026/10/25 13:50:40 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/10/25 14:13:59 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,9 @@ void                Bureaucrat::decrement() {
     if (this->grade + 1 > 150)
         throw Bureaucrat::GradeTooLowException();
     this->grade++;
+}
+
+std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs) {
+    o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
+    return o;
 }

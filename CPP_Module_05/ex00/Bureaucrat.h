@@ -6,7 +6,7 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:57:56 by karmanz           #+#    #+#             */
-/*   Updated: 2026/10/25 13:52:24 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/10/25 14:12:31 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ class Bureaucrat {
         };
         
 };
+
+std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs);
 
 #endif

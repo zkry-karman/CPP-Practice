@@ -6,11 +6,9 @@
 /*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 13:27:32 by karmanz           #+#    #+#             */
-/*   Updated: 2026/10/25 13:59:30 by karmanz          ###   ########.fr       */
+/*   Updated: 2026/10/25 14:22:08 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Bureaucrat.h"
 
 #include "Bureaucrat.h"
 
@@ -19,8 +17,8 @@ int main() {
     try {
         Bureaucrat a("zack", 1);
         Bureaucrat b("filipe", 150);
-        std::cout << a.getName() << ", bureaucrat grade " << a.getGrade() << std::endl;
-        std::cout << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+        std::cout << a << std::endl;
+        std::cout << b << std::endl;
     } catch (std::exception &e) {
         std::cout << "Unexpected exception: " << e.what() << std::endl;
     }
