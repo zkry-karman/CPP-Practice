@@ -72,10 +72,10 @@ std::ostream & operator<<(std::ostream & o, AForm const & rhs) {
     return o;
 }
 
-void    execute(Bureaucrat const &executor) {
+void    AForm::execute(Bureaucrat const &executor) const {
     if (!this->getIsSigned())
         throw AForm::FormNotSignedException();
-    if (executor.getGrade() > this->gradeRequiredToExec())
+    if (executor.getGrade() > this->getGradeRequiredToExec())
         throw AForm::GradeTooLowException();
     this->action();
 }

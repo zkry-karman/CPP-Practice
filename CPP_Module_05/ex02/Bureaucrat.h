@@ -50,6 +50,7 @@ class Bureaucrat {
         };
 
         void    signForm(AForm &form);
+        void    executeForm(AForm const & form) const;
         
 };
 

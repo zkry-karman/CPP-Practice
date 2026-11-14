@@ -27,6 +27,6 @@ class ShrubberyCreationForm: public AForm {
 
         void        action() const;
         
-}
+};
 
 #endif

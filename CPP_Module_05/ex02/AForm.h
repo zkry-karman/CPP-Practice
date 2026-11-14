@@ -65,7 +65,7 @@ class AForm {
 
     protected:
 
-    void                    action() const = 0;
+    virtual void                    action() const = 0;
 
         
 };
