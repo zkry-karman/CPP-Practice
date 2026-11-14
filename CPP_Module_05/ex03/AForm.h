@@ -29,7 +29,7 @@ class AForm {
     public:
         AForm();
         AForm(std::string const name, const int gradeRequiredToSign, const int gradeRequiredToExec);
-        ~AForm();
+        virtual ~AForm();
         AForm(const AForm& copy);
         AForm& operator = (const AForm& src);
 
