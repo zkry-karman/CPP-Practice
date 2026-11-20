@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zkarman <zkarman@student.42.fr>            +#+  +:+       +#+        */
+/*   By: karmanz <karmanz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:25:37 by zkarman           #+#    #+#             */
-/*   Updated: 2026/11/18 16:59:57 by zkarman          ###   ########.fr       */
+/*   Updated: 2026/11/20 21:04:02 by karmanz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SCALARCONVERTER_H
 
 #include <iostream>
+#include <string>
 
 class ScalarConverter {
     public:
@@ -21,6 +22,7 @@ class ScalarConverter {
         static void        convert(const std::string string);
 
     private:
+    
         ScalarConverter();
         ScalarConverter(const ScalarConverter & copy);
         ~ScalarConverter();
