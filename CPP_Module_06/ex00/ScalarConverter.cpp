@@ -6,29 +6,33 @@
 /*   By: zkarman <zkarman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 16:25:34 by zkarman           #+#    #+#             */
-/*   Updated: 2026/11/21 16:18:09 by zkarman          ###   ########.fr       */
+/*   Updated: 2026/11/21 16:39:34 by zkarman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.h"
 #include <sstream>
 #include <string>
+#include <cmath>
 
 
 /*====================================== CONVERSIONS ===================================================*/
-int    stringToDouble(const std::string string) {
+double    stringToDouble(const std::string string) {
     double  num;
     std::istringstream(string) >> num;
+    return (num);
 }
 
-int    stringToFloat(const std::string string) {
+float    stringToFloat(const std::string string) {
     float   f;
     std::stringstream(string) >> f;
+    return (f);
 }
 
 int    stringToInt(const std::string string) {
     int     i;
     std::istringstream(string) >> i;
+    return (i);
 }
 
 float   intToFloat(const int i) {
@@ -41,13 +45,13 @@ double  intToDouble(const int i) {
     return (value);
 }
 
-char    intToChar(const int i) {
+char    intToChar(const int i) { // to be changed
     char    c = (char)i;
     return (c);
 }
 
 int     floatToInt(const float f) {
-    int     value = static_cast<int>(round(f));
+    int     value = static_cast<int>(f);
     return (value);
 }
 
@@ -56,7 +60,21 @@ double  floatToDouble(const float f) {
     return (value);
 }
 
-char    floatToChar(const float f) {
+char    floatToChar(const float f) { // to be finished
+    
+}
+
+int     doubleToInt(const double d) {
+    int     value = static_cast<int>(d);
+    return (value);
+}
+
+float   doubleToFloat(const double d) {
+    float   value = static_cast<float>(d);
+    return (value);
+}
+
+char    doubleToChar(const double d) { // to be finished
     
 }
 
@@ -155,6 +173,26 @@ void    manageFloat(const std::string string) {
     int     i = floatToInt(f);
     double  d = floatToDouble(f);
     char    c = floatToChar(f);
+
+    std::cout << "String: " << string << " as a(n):" << std::endl;
+    std::cout << "integer: " << i << std::endl;
+    std::cout << "float: " << f << std::endl;
+    std::cout << "double: " << d << std::endl;
+    std::cout << "char: " << c << std::endl;
+}
+
+void    manageDouble(const std::string string) {
+    double  d = stringToDouble(string);
+    int     i = doubleToInt(d);
+    float   f = doubleToFloat(d);
+    char    c = doubleToChar(d);
+
+    std::cout << "String: " << string << " as a(n):" << std::endl;
+    std::cout << "integer: " << i << std::endl;
+    std::cout << "float: " << f << std::endl;
+    std::cout << "double: " << d << std::endl;
+    std::cout << "char: " << c << std::endl;
+
 }
 
 void    manageType(const std::string string) {
